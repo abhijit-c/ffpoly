@@ -40,7 +40,7 @@ class ffpoly
         ffpoly operator-(); 
         ffpoly operator-(ffpoly const &); 
         ffpoly operator*(ffpoly const &); 
-        ffpoly operator()(long long); 
+        long long operator()(long long); 
 
         // Presentation
         void print_poly();
