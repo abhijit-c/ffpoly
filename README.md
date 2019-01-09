@@ -23,7 +23,7 @@ To build you need:
 	- Access to a cpp compiler (both g++ and clang tested)
 	- The unix tools, _make_ and _ar_.
 
-Following the example in main.cpp, use the commands, call make in the ffpoly
+Following the example in the Makefile in this directory, call make in the ffpoly
 directory to build lib_ffpoly.a. Link this with your program. Make sure to have
 the include to ffpoly.h in your program.
 
