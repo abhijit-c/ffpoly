@@ -1,7 +1,8 @@
+CC = g++ 
 cflags= -Wall 
 
 default:
-	g++ -c *.cc $(cflags)
+	$(CC) -c *.cc $(cflags)
 	ar cr lib_ffpoly.a *.o
 	make clean
 
