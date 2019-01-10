@@ -9,5 +9,5 @@ default:
 	cd ffpoly && make clean
 
 clean:
-	rm -f bin
+	rm -f test.out
 	cd ffpoly && make clean
