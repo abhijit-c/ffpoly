@@ -14,21 +14,21 @@ class ffpoly
 {
     public:
         // Fields
-        std::vector<long long> coef;
+        std::vector<unsigned long long> coef;
         unsigned long long deg;
         unsigned long long characteristic;
 
         // Constructors and Destructors: ffpoly.cc
         ffpoly();
-        ffpoly(long long);
-        ffpoly(long long[], long long);
-        ffpoly(long long[], long long, long long);
+        ffpoly(unsigned long long);
+        ffpoly(std::vector<unsigned long long>, unsigned long long, unsigned long long);
+        ffpoly(unsigned long long[], unsigned long long, unsigned long long);
         ffpoly(ffpoly&);
         ~ffpoly() 
         { 
             coef.clear(); coef.shrink_to_fit(); 
             deg = 0;
-            characteristic = ULLONG_MAX;
+            characteristic = 0;
         }
 
         //Getters and Setters
@@ -42,7 +42,14 @@ class ffpoly
         ffpoly operator*(ffpoly const &); 
         long long operator()(long long); 
 
+        //Useful Tools
+        //ffpoly diff(ffpoly &, unsigned long long);
+        //ffpoly integrate(ffpoly &, unsigned long long);
+        //std::vector<ffpoly> factor();
+
         // Presentation
         void print_poly();
+	private:
+		void shrink_to_fit(ffpoly &);
 };
 #endif

@@ -3,35 +3,29 @@
 #include "ffpoly.h"
 
 // Constructors
-ffpoly::ffpoly()
-{
-	deg = 0;
-	coef.push_back(0);
-	characteristic = ULLONG_MAX;
-}
-
-ffpoly::ffpoly(long long c)
+ffpoly::ffpoly(unsigned long long c)
 {
 	deg = 0;
 	coef.push_back(0);
 	characteristic = c;
 }
-
-ffpoly::ffpoly(long long poly[], long long d)
+ /
+ffpoly::ffpoly(std::vector<unsigned long long> p, unsigned long long c)
 {
-	deg = d;
-	coef.insert(coef.end(), &poly[0], &poly[d+1]);
-	characteristic = ULLONG_MAX;
+	deg = p.size() - 1;
+	coef.insert(coef.end(), p.begin(), p.end());
+	characteristic = c;
 }
 
-ffpoly::ffpoly(long long poly[], long long d, long long c)
+ffpoly::ffpoly(unsigned long long poly[], 
+			   unsigned long long d, 
+			   unsigned long long c)
 {
 	deg = d;
 	coef.insert(coef.end(), &poly[0], &poly[d+1]);
 	characteristic = c;
 }
 
-//Destructor
 ffpoly::ffpoly(ffpoly& poly)
 {
 	deg = poly.deg;

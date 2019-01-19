@@ -3,10 +3,13 @@
 
 void test_eval();
 void test_mul();
+void test_add();
 
 int main()
 {
 	test_eval();
+    test_mul();
+    test_add();
 }
 
 void test_eval()
@@ -29,4 +32,15 @@ void test_mul()
 	p_1.print_poly();
 	p_2.print_poly();
 	(p_1 * p_2).print_poly();
+}
+
+void test_add()
+{
+	long long arr_1[7] = {1, 1, 1, 1, 1, 1, 1};
+	long long arr_2[7] = {-1, -1, -1, -1, -1, -1, -1};
+	ffpoly p_1(arr_1, 6, 7);
+	ffpoly p_2(arr_2, 6, 7);
+	p_1.print_poly();
+	p_2.print_poly();
+	(p_1 + p_2).print_poly();
 }
