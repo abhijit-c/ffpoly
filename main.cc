@@ -14,9 +14,9 @@ int main()
 
 void test_eval()
 {
-	long long arr_1[7] = {1, 1, 1, 1, 1, 1, 1};
+	unsigned long long arr_1[7] = {1, 1, 1, 1, 1, 1, 1};
 	ffpoly p_1(arr_1, 6, 7);
-	for (long long i = 0; i < 7; i++)
+	for (unsigned long long i = 0; i < 7; i++)
 	{
 		std::cout << p_1(i) << ",";
 	}
@@ -25,8 +25,8 @@ void test_eval()
 
 void test_mul()
 {
-	long long arr_1[7] = {1, 1, 1, 1, 1, 1, 1};
-	long long arr_2[2] = {-1, 1};
+	unsigned long long arr_1[7] = {1, 1, 1, 1, 1, 1, 1};
+	unsigned long long arr_2[2] = {6, 1};
 	ffpoly p_1(arr_1, 6, 7);
 	ffpoly p_2(arr_2, 1, 7);
 	p_1.print_poly();
@@ -36,8 +36,8 @@ void test_mul()
 
 void test_add()
 {
-	long long arr_1[7] = {1, 1, 1, 1, 1, 1, 1};
-	long long arr_2[7] = {-1, -1, -1, -1, -1, -1, -1};
+	unsigned long long arr_1[7] = {1, 1, 1, 1, 1, 1, 1};
+	unsigned long long arr_2[7] = {6, 5, 6, 6, 6, 6, 6};
 	ffpoly p_1(arr_1, 6, 7);
 	ffpoly p_2(arr_2, 6, 7);
 	p_1.print_poly();

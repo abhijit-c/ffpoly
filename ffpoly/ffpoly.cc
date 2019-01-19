@@ -9,7 +9,7 @@ ffpoly::ffpoly(unsigned long long c)
 	coef.push_back(0);
 	characteristic = c;
 }
- /
+
 ffpoly::ffpoly(std::vector<unsigned long long> p, unsigned long long c)
 {
 	deg = p.size() - 1;

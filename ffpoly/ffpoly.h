@@ -19,9 +19,8 @@ class ffpoly
         unsigned long long characteristic;
 
         // Constructors and Destructors: ffpoly.cc
-        ffpoly();
         ffpoly(unsigned long long);
-        ffpoly(std::vector<unsigned long long>, unsigned long long, unsigned long long);
+        ffpoly(std::vector<unsigned long long>, unsigned long long);
         ffpoly(unsigned long long[], unsigned long long, unsigned long long);
         ffpoly(ffpoly&);
         ~ffpoly() 
@@ -49,7 +48,5 @@ class ffpoly
 
         // Presentation
         void print_poly();
-	private:
-		void shrink_to_fit(ffpoly &);
 };
 #endif

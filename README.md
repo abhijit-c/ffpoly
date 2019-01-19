@@ -3,7 +3,8 @@
 (Reccomended you use a browser extension like TexTheWorld to render latex in
 documents)
 
-An implementation an element under the polynomial ring $Z_n[x]$. 
+An implementation an element under the polynomial ring $Z_n[x]$. NOTE: The
+library is not complete yet, and therefore is not reccomended for use. 
 
 ## Currently Supported Operations
 

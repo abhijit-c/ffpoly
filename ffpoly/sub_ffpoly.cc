@@ -41,5 +41,9 @@ ffpoly::operator-(ffpoly const &p)
 			newpoly.coef[i] = -p.coef[i] % newpoly.characteristic;
 		}
 	}
+	while (newpoly.deg > 0 && newpoly.coef[newpoly.deg] == 0)
+	{
+		newpoly.coef.pop_back(); newpoly.deg--;
+	}
 	return newpoly;
 }
