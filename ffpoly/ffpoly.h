@@ -31,15 +31,15 @@ class ffpoly
         }
 
         //Getters and Setters
-        long long get_term(unsigned long long) const;
-        void set_term(unsigned long long, long long);
+        unsigned long long get_term(unsigned long long) const;
+        void set_term(unsigned long long, unsigned long long);
 
         // Operators
         ffpoly operator+(ffpoly const &); 
         ffpoly operator-(); 
         ffpoly operator-(ffpoly const &); 
         ffpoly operator*(ffpoly const &); 
-        long long operator()(long long); 
+        unsigned long long operator()(unsigned long long); 
 
         //Useful Tools
         //ffpoly diff(ffpoly &, unsigned long long);

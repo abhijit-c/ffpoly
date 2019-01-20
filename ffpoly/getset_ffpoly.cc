@@ -7,7 +7,7 @@
  * behavior when I ask for a the value of a term out of the range of the
  * ffpoly. This makes the code in the operators a little nicer.
  */
-long long 
+unsigned long long 
 ffpoly::get_term(unsigned long long d) const
 {
 	if (d <= deg) { return coef[d]; }
@@ -15,7 +15,7 @@ ffpoly::get_term(unsigned long long d) const
 }
 
 void 
-ffpoly::set_term(unsigned long long d, long long new_c)
+ffpoly::set_term(unsigned long long d, unsigned long long new_c)
 {
 	if (d <= deg) { coef[d] = new_c; }
 	else { coef.resize(d+1, 0); deg = d; coef[d] = new_c; }
