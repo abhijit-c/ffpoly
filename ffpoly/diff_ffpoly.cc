@@ -14,7 +14,7 @@ ffpoly::diff(unsigned long long n)
 	for (unsigned long long i = n+1; i <= deg; i++)
 	{
 		v = (v * i) / (i - n);
-		diffpoly.coef.push_back(v*coef[i]);
+		diffpoly.coef.push_back(v*coef[i] % characeristic);
 	}
 	return diffpoly;
 }
