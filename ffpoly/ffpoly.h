@@ -5,8 +5,6 @@
 #define FFPOLY_H
 
 #include <algorithm>
-#include <climits>
-#include <cmath>
 #include <iostream>
 #include <vector>
 
@@ -39,10 +37,11 @@ class ffpoly
         ffpoly operator-(); 
         ffpoly operator-(ffpoly const &); 
         ffpoly operator*(ffpoly const &); 
+		ffpoly& operator=(ffpoly const &);
         unsigned long long operator()(unsigned long long); 
 
         //Useful Tools
-        //ffpoly diff(ffpoly &, unsigned long long);
+        ffpoly diff(unsigned long long);
         //ffpoly integrate(ffpoly &, unsigned long long);
         //std::vector<ffpoly> factor();
 

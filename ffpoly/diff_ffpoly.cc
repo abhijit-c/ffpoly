@@ -2,16 +2,19 @@
  * Author: Abhijit Chowdhary */
 #include "ffpoly.h"
 
-/* Computationally efficient way to compute the partial factorial?
 ffpoly
 ffpoly::diff(unsigned long long n)
 { 
 	ffpoly diffpoly(characteristic);
-	diffpoly.deg = std::max(0, deg - n);
-	diffpoly.coef[0] = 
-	for (unsigned long long i = n+1; i < deg; i++)
+	if (n > deg) { return diffpoly; }
+	diffpoly.deg = deg - n;
+	unsigned long long v = 1;
+	for (unsigned long long i = 2; i <= n; i++) { v*= i; }
+	diffpoly.coef[0] = v*coef[n] % characteristic;
+	for (unsigned long long i = n+1; i <= deg; i++)
 	{
-		diffpo
+		v = (v * i) / (i - n);
+		diffpoly.coef.push_back(v*coef[i]);
 	}
+	return diffpoly;
 }
-*/

@@ -39,3 +39,12 @@ the include to ffpoly.h in your program.
 - Support the GCD operation.
 - Class group computations.
 - Possible parallelization of compatible methods.
+
+## Known Bugs
+
+- While you may be able to set your characertistic to zero, this will not work
+  at the moment. Please use ffpoly ONLY for charactersitic > 0 for the moment.
+  - Planned fix: An easy fix, at the moment I'm naively modding by the
+	characteristic. I just need to not do that. But the refactor is a little
+	painful, and I've got other things I want to implement, so i'll get to it in
+	a bit.
