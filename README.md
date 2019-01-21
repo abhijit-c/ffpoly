@@ -22,8 +22,8 @@ what you consider horrific, please open an issue!
 
 To build you need:
 
-	- Access to a cpp compiler (both g++ and clang++ tested)
-	- The unix tools, _make_ and _ar_.
+- Access to a cpp compiler (both g++ and clang++ tested)
+- The unix tools, _make_ and _ar_.
 
 Following the example in the Makefile in this directory, call make in the ffpoly
 directory to build lib_ffpoly.a. Link this with your program. Make sure to have
