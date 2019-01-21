@@ -21,7 +21,8 @@ practices for writing this sort of stuff. If you have suggestions on how to fix
 what you consider horrific, please open an issue!
 
 To build you need:
-	- Access to a cpp compiler (both g++ and clang tested)
+
+	- Access to a cpp compiler (both g++ and clang++ tested)
 	- The unix tools, _make_ and _ar_.
 
 Following the example in the Makefile in this directory, call make in the ffpoly
