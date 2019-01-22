@@ -5,7 +5,11 @@
 ffpoly 
 ffpoly::operator+(ffpoly const &p)
 {
-	ffpoly newpoly(std::min(p.characteristic, characteristic));
+	if (characteristic != p.characteristic)
+	{
+		throw runtime_error("Characteristics must match to perform arithmetic");
+	}
+	ffpoly newpoly(characteristic);
 	newpoly.set_term(std::max(p.deg, deg), 0); //Internally resizes coef
 	for (unsigned long long i = newpoly.deg; i > 0; i--)
 	{

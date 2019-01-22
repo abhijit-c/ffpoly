@@ -8,10 +8,16 @@
  * ffpoly. This makes the code in the operators a little nicer.
  */
 unsigned long long 
-ffpoly::get_term(unsigned long long d) const
+ffpoly::get_term(unsigned long long d) 
 {
 	if (d <= deg) { return coef[d]; }
 	else { return 0; }
+}
+
+unsigned long long
+ffpoly::lc()
+{ //Return the leading coefficient of the polynomial.
+	return coef[deg];
 }
 
 void 

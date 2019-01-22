@@ -5,6 +5,7 @@
 #define FFPOLY_H
 
 #include <algorithm>
+#include <exception>
 #include <iostream>
 #include <vector>
 
@@ -29,7 +30,8 @@ class ffpoly
         }
 
         //Getters and Setters
-        unsigned long long get_term(unsigned long long) const;
+        unsigned long long get_term(unsigned long long);
+		unsigned long long lc();
         void set_term(unsigned long long, unsigned long long);
 
         // Operators
@@ -37,6 +39,7 @@ class ffpoly
         ffpoly operator-(); 
         ffpoly operator-(ffpoly const &); 
         ffpoly operator*(ffpoly const &); 
+		std::vector<ffpoly> operator/(ffpoly const &); 
 		ffpoly& operator=(ffpoly const &);
         unsigned long long operator()(unsigned long long); 
 
