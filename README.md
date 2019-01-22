@@ -3,12 +3,17 @@
 (Reccomended you use a browser extension like TexTheWorld to render latex in
 documents)
 
-An implementation an element under the polynomial ring $Z_n[x]$. NOTE: The
-library is not complete yet, and therefore is not reccomended for use. 
+An implementation an element under the polynomial ring $F_p[x]$. NOTE: The
+library is not complete yet, and therefore is not reccomended for use. In
+addition, I'm realizing that I was too hasty in just using unsigned long long's
+as the coefficients, since I need to compute multiplicative inverses for the
+coefficients. Since we've come to the stage where I'm building a class for the
+elements of $F_p$, I might as well make them have arbitrary precision as well,
+which implies that I'm figuring out GMP. 
 
 ## Currently Supported Operations
 
-Currently with ffpoly you can (for $f \in Z_n[x]$ with $deg(f) = d$):
+Currently with ffpoly you can (for $f \in F_n[x]$ with $deg(f) = d$):
 
 - Addition/Subtraction $\theta(d)$.
 - Multiplication $\theta(d^2)$ via naive convoluation. 
