@@ -7,7 +7,8 @@ ffpoly::operator*(ffpoly const &p)
 { //Naive convolution calculation
 	if (characteristic != p.characteristic)
 	{
-		throw runtime_error("Characteristics must match to perform arithmetic");
+		throw std::runtime_error(
+			"Characteristics must match to perform arithmetic");
 	}
 	ffpoly newpoly(characteristic);
 	newpoly.deg = p.deg + deg;

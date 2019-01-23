@@ -14,8 +14,7 @@ class ffpoly
     public:
         // Fields
         std::vector<unsigned long long> coef;
-        unsigned long long deg;
-        unsigned long long characteristic;
+        unsigned long long deg; unsigned long long characteristic;
 
         // Constructors and Destructors: ffpoly.cc
         ffpoly(unsigned long long);
@@ -32,8 +31,8 @@ class ffpoly
 		ffpoly& operator=(ffpoly const &);
 
         //Getters and Setters
-        unsigned long long get_term(unsigned long long);
-		unsigned long long lc();
+        unsigned long long get_term(unsigned long long) const;
+		unsigned long long lc() const;
         void set_term(unsigned long long, unsigned long long);
 
         // Operations on polynomial
@@ -52,8 +51,8 @@ class ffpoly
         ffpoly diff(unsigned long long);
 
 		//Tools for F_p
-		unsigned long long fpexp(unsigned long long, unsigned long long);
-		unsigned long long minv(unsigned long long);
+		unsigned long long fpexp(unsigned long long, unsigned long long) const;
+		unsigned long long minv(unsigned long long) const;
 
         // Presentation
         void print_poly();

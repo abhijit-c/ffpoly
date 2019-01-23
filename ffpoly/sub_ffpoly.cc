@@ -22,7 +22,8 @@ ffpoly::operator-(ffpoly const &p)
 {
 	if (characteristic != p.characteristic)
 	{
-		throw runtime_error("Characteristics must match to perform arithmetic");
+		throw std::runtime_error(
+			"Characteristics must match to perform arithmetic");
 	}
 	ffpoly newpoly(characteristic);
 	newpoly.set_term(std::max(p.deg, deg), 0); //Internally resizes coef

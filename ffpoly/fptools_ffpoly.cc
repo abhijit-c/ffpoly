@@ -3,7 +3,7 @@
 #include "ffpoly.h"
 
 unsigned long long
-ffpoly::fpexp(unsigned long long x, unsigned long long n)
+ffpoly::fpexp(unsigned long long x, unsigned long long n) const
 { //Computes x^a (mod characteristic)
 	if (n == 1) { return 1; }
 	unsigned long long y = 1;
@@ -17,7 +17,7 @@ ffpoly::fpexp(unsigned long long x, unsigned long long n)
 }
 
 unsigned long long
-ffpoly::minv(unsigned long long x)
+ffpoly::minv(unsigned long long x) const
 { //Using Euler's theorem $x^{\phi(m)} \equiv 1 \mod{m}$
 	return fexp(x, characteristic - 2);
 }

@@ -8,14 +8,16 @@ ffpoly::operator/(ffpoly const &p)
 	std::vector<ffpoly> div;
 	if (characteristic != p.characteristic)
 	{
-		throw runtime_error("Characteristics must match to perform arithmetic");
+		throw std::runtime_error(
+			"Characteristics must match to perform arithmetic");
 	}
 	ffpoly q(characteristic);
-	ffpoly r = this;
+	ffpoly r(*this);
 	unsigned long long c = minv(p.lc());
 	while (r.deg >= p.deg)
 	{
-		ffpoly s( monic_shift(r.deg - p.deg).const_mul(r.lc()*c) );
+		ffpoly s( const_mul(r.lc()*c) );
+		s = s.monic_shift(r.deg - p.deg) ;
 		q = q + s;
 		r = r - s*p;
 	}
