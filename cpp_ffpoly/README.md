@@ -4,8 +4,6 @@
 documents)
 
 An implementation an element under the polynomial ring $F_p[x]$ for small $p$.
-Currently reimplementing in C, because I found C++ a little annoying for this
-project.
 
 ## Currently Supported Operations
 
