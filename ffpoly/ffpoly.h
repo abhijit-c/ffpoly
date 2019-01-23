@@ -29,24 +29,31 @@ class ffpoly
             characteristic = 0;
         }
 
+		ffpoly& operator=(ffpoly const &);
+
         //Getters and Setters
         unsigned long long get_term(unsigned long long);
 		unsigned long long lc();
         void set_term(unsigned long long, unsigned long long);
 
-        // Operators
+        // Operations on polynomial
         ffpoly operator+(ffpoly const &); 
         ffpoly operator-(); 
         ffpoly operator-(ffpoly const &); 
+
         ffpoly operator*(ffpoly const &); 
+		ffpoly const_mul(unsigned long long);
+		ffpoly monic_shift(unsigned long long);
+
 		std::vector<ffpoly> operator/(ffpoly const &); 
-		ffpoly& operator=(ffpoly const &);
+
         unsigned long long operator()(unsigned long long); 
 
-        //Useful Tools
         ffpoly diff(unsigned long long);
-        //ffpoly integrate(ffpoly &, unsigned long long);
-        //std::vector<ffpoly> factor();
+
+		//Tools for F_p
+		unsigned long long fpexp(unsigned long long, unsigned long long);
+		unsigned long long minv(unsigned long long);
 
         // Presentation
         void print_poly();

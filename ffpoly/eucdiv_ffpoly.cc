@@ -12,5 +12,13 @@ ffpoly::operator/(ffpoly const &p)
 	}
 	ffpoly q(characteristic);
 	ffpoly r = this;
-	unsigned long long c = p.lc();
+	unsigned long long c = minv(p.lc());
+	while (r.deg >= p.deg)
+	{
+		ffpoly s( monic_shift(r.deg - p.deg).const_mul(r.lc()*c) );
+		q = q + s;
+		r = r - s*p;
+	}
+	div.push_back(q); div.push_back(r);
+	return div;
 }
