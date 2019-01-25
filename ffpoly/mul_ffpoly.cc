@@ -28,7 +28,7 @@ ffpoly::operator*(ffpoly const &p)
 ffpoly
 ffpoly::const_mul(unsigned long long c)
 { //Compute c*p where p is our polynomial.
-	ffpoly newpoly(this);
+	ffpoly newpoly(*this);
 	for (unsigned long long i = 0; i <= deg; i++)
 	{
 		newpoly.coef[i] = (coef[i]*c) % characteristic;

@@ -26,7 +26,14 @@ ffpoly::ffpoly(unsigned long long poly[],
 	characteristic = c;
 }
 
-ffpoly::ffpoly(ffpoly& poly)
+ffpoly::ffpoly(ffpoly &poly)
+{
+	deg = poly.deg;
+	coef.insert(coef.end(), poly.coef.begin(), poly.coef.end()); 
+	characteristic = poly.characteristic;
+}
+
+ffpoly::ffpoly(ffpoly const &poly)
 {
 	deg = poly.deg;
 	coef.insert(coef.end(), poly.coef.begin(), poly.coef.end()); 

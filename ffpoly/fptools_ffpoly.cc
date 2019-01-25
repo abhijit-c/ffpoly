@@ -19,5 +19,5 @@ ffpoly::fpexp(unsigned long long x, unsigned long long n) const
 unsigned long long
 ffpoly::minv(unsigned long long x) const
 { //Using Euler's theorem $x^{\phi(m)} \equiv 1 \mod{m}$
-	return fexp(x, characteristic - 2);
+	return fpexp(x, characteristic - 2);
 }

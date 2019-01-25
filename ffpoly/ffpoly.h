@@ -21,6 +21,7 @@ class ffpoly
         ffpoly(std::vector<unsigned long long>, unsigned long long);
         ffpoly(unsigned long long[], unsigned long long, unsigned long long);
         ffpoly(ffpoly&);
+        ffpoly(ffpoly const &);
         ~ffpoly() 
         { 
             coef.clear(); coef.shrink_to_fit(); 
@@ -28,7 +29,7 @@ class ffpoly
             characteristic = 0;
         }
 
-		ffpoly& operator=(ffpoly const &);
+		//ffpoly& operator=(ffpoly const &);
 
         //Getters and Setters
         unsigned long long get_term(unsigned long long) const;

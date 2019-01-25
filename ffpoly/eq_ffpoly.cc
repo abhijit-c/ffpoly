@@ -1,7 +1,7 @@
 /* File: eq_ffpoly.cc
  * Author: Abhijit Chowdhary */
 #include "ffpoly.h"
-
+/*
 ffpoly&
 ffpoly::operator=(ffpoly const &p)
 { 
@@ -11,3 +11,4 @@ ffpoly::operator=(ffpoly const &p)
 	characteristic = p.characteristic;
 	return *this;
 }
+*/

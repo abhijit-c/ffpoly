@@ -5,6 +5,7 @@ void test_eval();
 void test_mul();
 void test_add();
 void test_diff();
+void test_eucdiv();
 
 int main()
 {
@@ -12,6 +13,7 @@ int main()
     test_mul();
     test_add();
 	test_diff();
+	test_eucdiv();
 }
 
 void test_eval()
@@ -57,4 +59,15 @@ void test_diff()
 	{
 		(p_1.diff(i)).print_poly();
 	}
+}
+
+void test_eucdiv()
+{
+	ffpoly p_1(7919); 
+	p_1.set_term(2, 1); p_1.set_term(1, 2); p_1.set_term(0, 1);
+	ffpoly p_2(7919); 
+	p_2.set_term(1, 1); p_2.set_term(0, 1);
+	std::vector<ffpoly> a = (p_1 / p_2);
+	for (auto i : a) { i.print_poly(); }
+	
 }
