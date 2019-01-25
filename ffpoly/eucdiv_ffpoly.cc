@@ -46,4 +46,13 @@ ffpoly::operator/(ffpoly const &p)
 	}
 	std::vector<ffpoly> div;
 	ffpoly q(characteristic); ffpoly r(*this);
+	while ( !(r.deg == 0 && r.coef[0] == 0) && r.deg >= p.deg )
+	{
+		ffpoly t(characteristic); t.set_term(0, r.lc()*minv(p.lc()));
+		q = q + t;
+		r = r - (t*p);
+	}
+	div.push_back(q);
+	div.push_back(r);
+	return div;
 }

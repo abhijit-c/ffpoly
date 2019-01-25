@@ -11,7 +11,7 @@ ffpoly::operator-()
 	newpoly.coef[0] = -coef[0];
 	for (unsigned long long i = 0; i <= newpoly.deg; i++)
 	{
-		newpoly.coef.push_back(-coef[i]);
+		newpoly.coef.push_back(characteristic - coef[i]);
 	}
 	return newpoly;
 }
@@ -29,7 +29,7 @@ ffpoly::operator-(ffpoly const &p)
 	newpoly.set_term(std::max(p.deg, deg), 0); //Internally resizes coef
 	for (unsigned long long i = newpoly.deg; i > 0; i--)
 	{
-		unsigned long long v = (get_term(i)-p.get_term(i)) 
+		unsigned long long v = (get_term(i) + (characteristic - p.get_term(i))) 
 							   % newpoly.characteristic;
 		if (v == 0)
 		{
