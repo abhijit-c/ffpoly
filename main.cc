@@ -59,12 +59,14 @@ void test_diff()
 	{
 		(p_1.diff(i)).print_poly();
 	}
+	std::cout << std::endl;
 }
 
 void test_eucdiv()
 {
 	ffpoly p_1(7919); 
-	p_1.set_term(2, 1); p_1.set_term(1, 2); p_1.set_term(0, 1);
+	p_1.set_term(3, 1); p_1.set_term(2, 3); p_1.set_term(1, 3);
+	p_1.set_term(1,1);
 	ffpoly p_2(7919); 
 	p_2.set_term(1, 1); p_2.set_term(0, 1);
 	std::vector<ffpoly> a = (p_1 / p_2);

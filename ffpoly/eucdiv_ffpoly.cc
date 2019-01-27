@@ -2,7 +2,7 @@
  * Author: Abhijit Chowdhary */
 #include "ffpoly.h"
 
-/*
+
 std::vector<ffpoly>
 ffpoly::operator/(ffpoly const &p)
 {
@@ -29,8 +29,9 @@ ffpoly::operator/(ffpoly const &p)
 	div.push_back(q); div.push_back(r);
 	return div;
 }
-*/
 
+
+/*
 std::vector<ffpoly>
 ffpoly::operator/(ffpoly const &p)
 {
@@ -56,3 +57,4 @@ ffpoly::operator/(ffpoly const &p)
 	div.push_back(r);
 	return div;
 }
+*/

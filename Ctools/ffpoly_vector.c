@@ -1,6 +1,4 @@
 #include <ffpoly_vector.h>
-#include <stdint.h>
-#include <stddef.h>
 
 /*
  * Initializes vector field.
